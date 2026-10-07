@@ -25,8 +25,6 @@
     { "path": "unpackaged/post_exp_customer" },
     { "path": "unpackaged/post_guidedselling" },
     { "path": "unpackaged/post_large_stx" },
-    { "path": "unpackaged/post_manufacturing" },
-    { "path": "unpackaged/post_manufacturing_core" },
     { "path": "unpackaged/post_payments" },
     { "path": "unpackaged/post_payments_ext" },
     { "path": "unpackaged/post_payments_settings" },

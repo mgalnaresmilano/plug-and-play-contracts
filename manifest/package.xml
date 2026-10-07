@@ -87,12 +87,6 @@
         <members>RLM_Learning_SectionBlockController</members>
         <members>RLM_Learning_SectionBlockSequence</members>
         <members>RLM_Learning_UserInformation</members>
-        <members>RLM_MFG_OrderToServiceContract</members>
-        <members>RLM_MFG_OrderToServiceContractTest</members>
-        <members>RLM_MFG_SalesAgreementRLMOrder</members>
-        <members>RLM_MFG_SalesAgreementRLMOrderTest</members>
-        <members>RLM_MFG_ServiceContractQuote</members>
-        <members>RLM_MFG_ServiceContractQuoteTest</members>
         <members>RLM_MockAppAdapter</members>
         <members>RLM_MockTaxAdapter</members>
         <members>RLM_OnAccountBillingController</members>
@@ -158,15 +152,10 @@
         <name>AssessmentQuestionSet</name>
     </types>
     <types>
-        <members>OpenSObject</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
         <members>RLM_Import_Quote_Lines_With_Multi_Currency_Billing</members>
         <name>BatchCalcJobDefinition</name>
     </types>
     <types>
-        <members>LEXTHEMINGBadger</members>
         <members>LEXTHEMINGQuantumBit</members>
         <members>LEXTHEMINGQuantumBitSLDSv2</members>
         <name>BrandingSet</name>
@@ -180,9 +169,6 @@
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>BadgerEquipmentprimarylogocolor</members>
-        <members>BadgerEquipmentprimarylogocolor1</members>
-        <members>BadgerEquipmentprimarylogocolor2</members>
         <members>DALLE_20250314_083045_A_modern_hig</members>
         <members>RLM_QuantumBit</members>
         <members>RLM_einstein_working</members>
@@ -256,9 +242,6 @@
         <members>Quote.RLM_Discount_Percent__c</members>
         <members>Quote.RLM_Distributor_Account__c</members>
         <members>Quote.RLM_EndDate__c</members>
-        <members>Quote.RLM_MFG_Margin__c</members>
-        <members>Quote.RLM_MFG_Sales_Agreement__c</members>
-        <members>Quote.RLM_MFG_Total_Cost__c</members>
         <members>Quote.RLM_Payment_Terms__c</members>
         <members>Quote.RLM_Sales_Rep_Name__c</members>
         <members>Quote.RLM_Seller_City__c</members>
@@ -277,9 +260,6 @@
         <members>QuoteLineItem.RLM_ConstraintEngineNodeStatus__c</members>
         <members>QuoteLineItem.RLM_Distributor_Discount_Percent__c</members>
         <members>QuoteLineItem.RLM_Distributor_Unit_Price__c</members>
-        <members>QuoteLineItem.RLM_MFG_Covered_Asset_SN__c</members>
-        <members>QuoteLineItem.RLM_MFG_Covered_Asset__c</members>
-        <members>QuoteLineItem.RLM_MFG_Product_Name_formula__c</members>
         <members>QuoteLineItem.RLM_Partner_Net_Total_Price__c</members>
         <members>QuoteLineItem.RLM_ProductName__c</members>
         <members>RLM_Build_Info__mdt.RLM_Branch__c</members>
@@ -328,14 +308,6 @@
         <members>RLM_Learning_Section__c.RLM_Learning_Video_Link__c</members>
         <members>RLM_Learning_Setup_Page_Map__mdt.RLM_Learning_Setup_Page_URL__c</members>
         <members>RLM_Set_Up_Quote_Settings__c.RLM_Show_Product_Set_Selector__c</members>
-        <members>SalesAgreement.RLM_MFG_Contract__c</members>
-        <members>SalesAgreementProduct.RLM_MFG_ConstraintEngineNodeStatus__c</members>
-        <members>SalesAgreementProduct.RLM_MFG_Unit_Cost__c</members>
-        <members>SalesAgreementProductSchedule.RLM_MFG_PricebookEntryId__c</members>
-        <members>SalesAgreementProductSchedule.RLM_MFG_Product2Id__c</members>
-        <members>SalesAgreementProductSchedule.RLM_MFG_Product_Name__c</members>
-        <members>SalesAgreementProductSchedule.RLM_MFG_SalesAgreementId__c</members>
-        <members>ServiceContract.RLM_MFG_Quote__c</members>
         <members>Twin_Field_Manager__c.CD_Name__c</members>
         <members>Twin_Field_Manager__c.Context_Definition_Version__c</members>
         <members>Twin_Field_Manager__c.Context_Definition__c</members>
@@ -386,6 +358,7 @@
         <members>Order</members>
         <members>OrderItem</members>
         <members>Quote</members>
+        <members>QuoteLineItem</members>
         <members>RLM_Build_Info__mdt</members>
         <members>RLM_Learning_Block__c</members>
         <members>RLM_Learning_DynamicLink__c</members>
@@ -567,19 +540,6 @@
         <members>RLM_DiscoverProducts</members>
         <members>RLM_DocGen_Get_Product_Attachments</members>
         <members>RLM_Generate_Statement_of_Account</members>
-        <members>RLM_MFG_Activate_Sales_Agreement</members>
-        <members>RLM_MFG_Add_QuoteLineItem_to_Quote</members>
-        <members>RLM_MFG_Contracts_Add_Obligations</members>
-        <members>RLM_MFG_Create_Sales_Agreement_From_Quote</members>
-        <members>RLM_MFG_Create_Work_Order_DRO</members>
-        <members>RLM_MFG_Order_to_Svc_Contract_DRO_Task</members>
-        <members>RLM_MFG_Quote_to_ServiceContract</members>
-        <members>RLM_MFG_RCA_Create_Quote_From_Contract</members>
-        <members>RLM_MFG_RC_Create_Contract_From_Quote</members>
-        <members>RLM_MFG_RC_Create_Sales_Agreement_From_Contract</members>
-        <members>RLM_MFG_RC_Refresh_Contract_Table</members>
-        <members>RLM_MFG_Sales_Agreement_Order_Execution</members>
-        <members>RLM_MFG_Service_Contract_Quoting</members>
         <members>RLM_On_Demand_Invoice_Document_Generation</members>
         <members>RLM_OrchestrateUsageManagement</members>
         <members>RLM_Order_Contract_Creation_and_Association</members>
@@ -728,7 +688,6 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>Badger</members>
         <members>QuantumBit</members>
         <members>QuantumBitSLDSv2</members>
         <name>LightningExperienceTheme</name>
@@ -812,7 +771,6 @@
         <members>RLM_Guided_Selling</members>
         <members>RLM_LargeSalesTransaction</members>
         <members>RLM_Learning</members>
-        <members>RLM_MFG_RCA</members>
         <members>RLM_PRM</members>
         <members>RLM_PRM_Pricing</members>
         <members>RLM_Partner_Community_User_Perm_Set</members>
@@ -841,8 +799,6 @@
         <members>RLM_DRO_Admin</members>
         <members>RLM_Fulfillment_Designer</members>
         <members>RLM_Fulfillment_Manager</members>
-        <members>RLM_MFG</members>
-        <members>RLM_MFG_scratch</members>
         <members>RLM_NGP</members>
         <members>RLM_PCM</members>
         <members>RLM_PSL</members>
@@ -880,14 +836,11 @@
     <types>
         <members>Account.RLM_Create_Billing_Schedule_Group</members>
         <members>Account.RLM_Generate_Account_Statement</members>
-        <members>Account.RLM_MFG_Create_Service_Contract_Quote</members>
         <members>Account.RLM_New_Opportunity</members>
         <members>Account.RLM_QuickQuote</members>
         <members>Account.RLM_Reset_Account</members>
         <members>Account.RLM_Set_Up_Quote</members>
         <members>CollectionPlan.RLM_Charge_Late_Fee</members>
-        <members>Contract.RLM_MFG_Create_Sales_Agreement</members>
-        <members>Contract.RLM_MFG_New_Quote</members>
         <members>Invoice.Apply_Payment</members>
         <members>Invoice.RLM_Apply_Payment</members>
         <members>Invoice.RLM_Payment_Link</members>
@@ -896,12 +849,8 @@
         <members>Opportunity.RLM_New_Quote</members>
         <members>Order.RLM_Prepare_For_Activation</members>
         <members>Quote.RLM_Create_Proposal</members>
-        <members>Quote.RLM_MFG_Create_Sales_Agreement</members>
-        <members>Quote.RLM_MFG_Create_Service_Contract</members>
         <members>Quote.RLM_Submit_for_Approval</members>
         <members>RLM_Learning_Section__c.Select_Blocks</members>
-        <members>SalesAgreement.RLM_MFG_Activate</members>
-        <members>SalesAgreement.RLM_MFG_Quick_Quote</members>
         <name>QuickAction</name>
     </types>
     <types>
@@ -935,10 +884,6 @@
         <name>RuleLibraryDefinition</name>
     </types>
     <types>
-        <members>SalesAgreementSettings</members>
-        <name>SalesAgreementSettings</name>
-    </types>
-    <types>
         <members>AgentPlatform</members>
         <members>Analytics</members>
         <members>Billing</members>
@@ -952,7 +897,6 @@
         <members>IndustriesConstraints</members>
         <members>IndustriesContext</members>
         <members>IndustriesEinsteinFeature</members>
-        <members>IndustriesManufacturing</members>
         <members>IndustriesPricing</members>
         <members>IndustriesRating</members>
         <members>IndustriesUsage</members>
@@ -978,82 +922,28 @@
         <name>StandardValueSet</name>
     </types>
     <types>
-        <members>AO1000Bag</members>
-        <members>AR300Drum</members>
-        <members>AR300Tote</members>
-        <members>Acet50Drum</members>
-        <members>Acet50Pail</members>
-        <members>Babylon</members>
-        <members>Badger</members>
-        <members>BadgerOil</members>
-        <members>CI3000Drum</members>
-        <members>CI3000Pail</members>
-        <members>DF4000Drum</members>
-        <members>DF4000Pail</members>
-        <members>DirtBucket</members>
-        <members>EPX500Drum</members>
-        <members>EPX500Pail</members>
-        <members>FluidAnalysis</members>
-        <members>FuelCell</members>
-        <members>GPSTracker</members>
-        <members>GeneralBucket</members>
-        <members>H2SO4Drum</members>
-        <members>H2SO4IBC</members>
-        <members>HeavyDutyTires</members>
         <members>InAppLearningImages</members>
-        <members>Labor</members>
-        <members>MaintenanceVisit</members>
-        <members>NH3Cyl</members>
-        <members>NaOHBag</members>
-        <members>OilFilter</members>
-        <members>PC500Pail</members>
-        <members>PE1000Bag</members>
-        <members>PartsDiscount</members>
         <members>RAIDController</members>
         <members>RLM_InvoiceCardLogo</members>
         <members>RLM_quantumBit_logo_sq</members>
         <members>RLM_quantum_bit_logo</members>
-        <members>RemoteMonitoring</members>
-        <members>ServiceContract</members>
-        <members>SiteSamples</members>
-        <members>SkidSteer414LP</members>
-        <members>SoundReductionOption</members>
-        <members>SparkPlugs</members>
-        <members>StandardDutyTires</members>
-        <members>SuspensionSeat</members>
-        <members>TOL100Drum</members>
-        <members>TOL100IBC</members>
-        <members>TiO21000kg</members>
-        <members>TiO2Bag</members>
-        <members>TrenchingBucket</members>
-        <members>UV2000Bag</members>
-        <members>Warranty</members>
-        <members>XYL200Drum</members>
-        <members>XYL200IBC</members>
         <members>add_api</members>
         <members>add_auto_credit</members>
         <members>add_data_graph</members>
-        <members>aircylinder</members>
         <members>api_access</members>
         <members>api_flex</members>
         <members>api_govt</members>
         <members>api_preprod</members>
         <members>api_prod</members>
-        <members>babylonjsloaders</members>
         <members>cacheboost</members>
         <members>collab_suite</members>
         <members>complete_solution</members>
-        <members>couplingkit</members>
         <members>cpuheatsink</members>
         <members>database</members>
         <members>essential_train</members>
         <members>fund_training</members>
         <members>genAI</members>
-        <members>generators</members>
-        <members>gltfFileLoader</members>
-        <members>gltf_validator</members>
         <members>gold_maint</members>
-        <members>groovebearing</members>
         <members>hd_1tb_72k</members>
         <members>hd_4tb_72k</members>
         <members>hd_8tb_72k</members>
@@ -1064,12 +954,8 @@
         <members>intel_e52683</members>
         <members>intel_x710_dp</members>
         <members>intel_x710_sfp</members>
-        <members>jawcoupling</members>
-        <members>jawcoupling2</members>
         <members>liquidcooler</members>
-        <members>motorkit</members>
         <members>nvexpand</members>
-        <members>pillowblockbearing</members>
         <members>power_cable</members>
         <members>powersupply</members>
         <members>powerswerve</members>
@@ -1088,19 +974,10 @@
         <members>ram_16GB_RDIMM2</members>
         <members>ram_32GB_RDIMM</members>
         <members>ram_8GB_RDIMM</members>
-        <members>revenuecloudRenderDrawStyling</members>
-        <members>rigidclamp</members>
-        <members>rollerchain</members>
         <members>silv_maint</members>
-        <members>sleevebushing</members>
         <members>soft_maint2</members>
-        <members>solenoid_5port</members>
-        <members>sprocket</members>
         <members>starter</members>
         <members>subscription</members>
-        <members>switchgear</members>
-        <members>threephasemotor</members>
-        <members>vfd</members>
         <name>StaticResource</name>
     </types>
     <types>
