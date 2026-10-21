@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>PnP_RestoreDemoController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>PnP_Restore_Demo</name>
+    </customPermissions>
+    <description>Restore Demo action on Contract: deletes a demo contract and everything generated from it so the demo can be run again from the quote.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PnP Restore Demo</label>
+</PermissionSet>

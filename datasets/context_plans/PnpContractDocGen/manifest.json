@@ -1,0 +1,8 @@
+{
+  "contexts": [
+    {
+      "developerName": "PNP_ContractDocGenContext",
+      "planFile": "contexts/pnp_contract_docgen.json"
+    }
+  ]
+}

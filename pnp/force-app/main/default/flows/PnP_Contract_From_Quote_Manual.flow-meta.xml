@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Copia al contrato los datos de la quote y de su oportunidad. No toca Status: el contrato se queda en Draft. El templateId que devuelve la clase no se usa, porque la plantilla la elige el usuario al generar el documento.</description>
+        <name>Rellenar_Campos</name>
+        <label>Rellenar contexto Plug and Play</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>PnP_ContractFromQuote</actionName>
+        <actionType>apex</actionType>
+        <faultConnector>
+            <targetReference>Absorber_Fallo</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contractId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>PnP_ContractFromQuote</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Sumidero de fallos. El contrato ya existe cuando corre este camino, asi que dejar escapar el fallo solo produciria un correo de error al administrador sin arreglar nada.</description>
+        <name>Absorber_Fallo</name>
+        <label>Absorber el fallo</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>mensajeDeFallo</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Al crear un contrato desde una quote con el boton nativo Create Contract, rellena la seccion Contexto Plug and Play del contrato con los datos de la quote y de la oportunidad. A diferencia de PnP_Contract_From_Quote, NO genera el documento: el usuario elige la plantilla desde Create Contract Document. Corre por el camino asincrono a proposito, porque la accion nativa sigue creando lineas de contrato y precios contratados dentro de la misma transaccion. Escucha creacion y actualizacion porque el boton nativo inserta el contrato sin SourceQuoteId y lo rellena en un guardado posterior. PnP_Source_Quote_Number__c vacio es lo que hace que corra una sola vez, ya que la propia accion Apex lo rellena.</description>
+    <environments>Default</environments>
+    <interviewLabel>PnP Contract From Quote Manual {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PnP Contract From Quote Manual</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SourceQuoteId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PnP_Source_Quote_Number__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Contract</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Rellenar_Campos</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Recoge el mensaje del fallo para que el camino asincrono termine limpio. No se persiste en ningun sitio.</description>
+        <name>mensajeDeFallo</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

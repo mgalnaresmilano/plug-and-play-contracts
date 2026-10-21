@@ -1,0 +1,45 @@
+<template>
+    <lightning-quick-action-panel header="Restore Demo">
+        <template lwc:if={isLoading}>
+            <div class="slds-is-relative slds-p-around_large">
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </div>
+        </template>
+
+        <template lwc:if={hasPreview}>
+            <div class="slds-text-body_regular slds-m-bottom_small">
+                This permanently deletes contract <strong>{preview.contractNumber}</strong> and everything
+                generated from it, so you can create the contract again from {quoteLabel}.
+            </div>
+            <ul class="slds-list_dotted slds-m-bottom_small">
+                <template for:each={preview.lines} for:item="line">
+                    <li key={line.label}>{line.label}: {line.count}</li>
+                </template>
+            </ul>
+            <div class="slds-text-color_weak slds-text-body_small">
+                Posted invoices can't be deleted and are kept.
+            </div>
+        </template>
+
+        <template lwc:if={isRestoring}>
+            <lightning-spinner alternative-text="Restoring demo" size="medium"></lightning-spinner>
+        </template>
+
+        <template lwc:if={errorMessage}>
+            <div class="slds-notify slds-notify_alert slds-alert_error slds-m-top_small" role="alert">
+                <h2>{errorMessage}</h2>
+            </div>
+        </template>
+
+        <div slot="footer">
+            <lightning-button label="Cancel" onclick={handleCancel} disabled={isRestoring}></lightning-button>
+            <lightning-button
+                class="slds-m-left_x-small"
+                variant="destructive"
+                label="Restore Demo"
+                onclick={handleRestore}
+                disabled={isRestoreDisabled}
+            ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
